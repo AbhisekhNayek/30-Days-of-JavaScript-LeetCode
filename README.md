@@ -42,7 +42,7 @@ To get started:
 - **Day 16**: [Promise Time Limit](Promise_Time_Limit.js)
 - **Day 17**: [Cache With Time Limit](Cache_With_Time_Limit.js)
 - **Day 18**: [Debounce](Debounce.js)
-- **Day 19**: [Execute Asynchronous Functions in Parallel](Day19/Execute_Asynchronous_Functions_in_Parallel.js)
+- **Day 19**: [Execute Asynchronous Functions in Parallel](Execute_Asynchronous_Functions_In_Parallel.js)
 - **Day 20**: [JSON](Day20/JSON.js)
 - **Day 21**: [Chunk Array](Day21/Chunk_Array.js)
 - **Day 22**: [Array Prototype Last](Day22/Array_Prototype_Last.js)
