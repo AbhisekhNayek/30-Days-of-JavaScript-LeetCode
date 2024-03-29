@@ -44,8 +44,8 @@ To get started:
 - **Day 18**: [Debounce](Debounce.js)
 - **Day 19**: [Execute Asynchronous Functions in Parallel](Execute_Asynchronous_Functions_In_Parallel.js)
 - **Day 20**: [JSON](Day20/JSON.js)
-- **Day 21**: [Chunk Array](Day21/Chunk_Array.js)
-- **Day 22**: [Array Prototype Last](Day22/Array_Prototype_Last.js)
+- **Day 21**: [Chunk Array](Chunk_Array.js)
+- **Day 22**: [Array Prototype Last](Array_Prototype_Last.js)
 - **Day 23**: [Group By](Day23/Group_By.js)
 - **Day 24**: [Sort By](Day24/Sort_By.js)
 - **Day 25**: [Join Two Arrays by ID](Day25/Join_Two_Arrays_by_ID.js)
@@ -54,6 +54,7 @@ To get started:
 - **Day 28**: [Classes](Day28/Classes.js)
 - **Day 29**: [Array Wrapper](Day29/Array_Wrapper.js)
 - **Day 30**: [Calculator with Method Chaining](Day30/Calculator_with_Method_Chaining.js)
+- **Day 31**: [Is Object Empty](Is_Object_Empty.js)
 
 
 ## Contributing
