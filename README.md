@@ -54,7 +54,6 @@ To get started:
 - **Day 28**: [Event_Emitter](Event_Emitter.js)
 - **Day 29**: [Array Wrapper](Array_Wrapper.js)
 - **Day 30**: [Calculator with Method Chaining](Calculator_With_Method_Chaining.js)
-- **Day 31**: [JSON](JSON.js)
 
 
 ## Contributing
