@@ -51,7 +51,7 @@ To get started:
 - **Day 25**: [Join Two Arrays by ID](Join_Two_Arrays_By_Id.js)
 - **Day 26**: [Flatten Deeply Nested Array](Flatten_Deeply_Nested_Array.js)
 - **Day 27**: [Compact Object](Compact_Object.js)
-- **Day 28**: [Classes](Object_Emitter.js)
+- **Day 28**: [Object_Emitter](Object_Emitter.js)
 - **Day 29**: [Array Wrapper](Array_Wrapper.js)
 - **Day 30**: [Calculator with Method Chaining](Calculator_With_Method_Chaining.js)
 - **Day 31**: [JSON](JSON.js)
