@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            margin-top: 10px;
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            margin-top: 10px;
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD">
+
+            <button type="submit">Register</button>
+            <div id="errorMessages" class="error"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            document.getElementById('errorMessages').innerHTML = '';
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const dob = document.getElementById('dob').value;
+
+            let isValid = true;
+            let errorMessages = '';
+
+            if (username.length < 3) {
+                errorMessages += 'Username must be at least 3 characters long.<br>';
+                isValid = false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                errorMessages += 'Please enter a valid email address.<br>';
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                errorMessages += 'Password must be at least 6 characters long.<br>';
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessages += 'Passwords do not match.<br>';
+                isValid = false;
+            }
+
+            const phonePattern = /^[6-9]\d{9}$/;
+            if (!phonePattern.test(phoneNumber)) {
+                errorMessages += 'Please enter a valid 10-digit Indian phone number.<br>';
+                isValid = false;
+            }
+
+            const dobPattern = /^\d{4}-\d{2}-\d{2}$/;
+            if (!dobPattern.test(dob) || isNaN(new Date(dob).getTime())) {
+                errorMessages += 'Please enter a valid date in the format YYYY-MM-DD.<br>';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+                document.getElementById('errorMessages').innerHTML = errorMessages;
+            }
+        });
+    </script>
+</body>
+</html>
